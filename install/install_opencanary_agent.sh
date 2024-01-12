@@ -1,7 +1,7 @@
 #!/bin/sh
 #Author: Weiho@破晓团队
-#Blog  : www.weiho.xyz 
-#Email : H4x0er@SecBug.Org 
+#Blog  : www.weiho.xyz
+#Email : H4x0er@SecBug.Org
 #Github: https://github.com/zhaoweiho
 #Date  : 2018-12-25
 #Environment: CentOS7.2
@@ -36,9 +36,9 @@ if [ $netcard_num -lt 2 ];then
     ip1=`sed -n '1p' /tmp/netcard_ip.txt`
     ip2=`sed -n '2p' /tmp/netcard_ip.txt`
     echo "
-    请选择本机IP?(1-3) 
-    1.$ip1  
-    2.$ip2 
+    请选择本机IP?(1-3)
+    1.$ip1
+    2.$ip2
     3.其他
     "
     read -p "请输入指令(1-3):" ip
@@ -61,7 +61,7 @@ if [ $netcard_num -lt 2 ];then
         read -p "请输入本机IP:" ip
         ;;
         *)
-        echo "请输入数字:1-3"  
+        echo "请输入数字:1-3"
         ;;
         esac
 fi
@@ -140,7 +140,7 @@ if [ "$a" \< "7.0" ];then
     echo "##############正在关闭iptables防火墙#############"
     /etc/init.d/iptables stop
     chkconfig iptables off
-    else 
+    else
     echo "##############正在关闭firewalld防火墙#############"
     systemctl stop firewalld.service
     systemctl disable firewalld.service
